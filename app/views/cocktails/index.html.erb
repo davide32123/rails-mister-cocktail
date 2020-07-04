@@ -3,7 +3,7 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="vertical-card col-3" data-aos="fade-up">
-        <img src="https://source.unsplash.com/random/800x600" alt="" class="vertical-card-img">
+        <%= link_to (image_tag "https://source.unsplash.com/random/800x600", class: "vertical-card-img"), cocktail_path(cocktail) %>
         <%= link_to cocktail.name, cocktail_path(cocktail), class: "flex-grow-1 text-justify" %>
       </div>
     <% end %>
