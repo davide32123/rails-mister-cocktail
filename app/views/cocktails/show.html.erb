@@ -1,0 +1,12 @@
+<h2><%= @cocktail.name %></h2>
+<h3>Doses needed</h3>
+<% @cocktail.doses.each do |dose| %>
+  <p><%= dose.description  %> of <%= dose.ingredient.name %>
+     <%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<% end %>
+<hr>
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.submit %>
+<% end %>
