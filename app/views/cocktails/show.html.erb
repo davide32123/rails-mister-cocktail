@@ -1,12 +1,19 @@
 <h2><%= @cocktail.name %></h2>
-<h3>Doses needed</h3>
-<% @cocktail.doses.each do |dose| %>
-  <p><%= dose.description  %> of <%= dose.ingredient.name %>
-     <%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></p>
-<% end %>
-<hr>
-<%= simple_form_for([@cocktail, @dose]) do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit %>
-<% end %>
+<div class="d-flex justify-content-between">
+  <div>
+    <img src="https://source.unsplash.com/featured/?cocktail" alt="" class="square-img">
+  </div>
+  <div class ="flex-grow-1 p-3">
+    <% @cocktail.doses.each do |dose| %>
+      <p><%= dose.description  %> of <%= dose.ingredient.name %>
+         <%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></p>
+    <% end %>
+  </div>
+  <div class="white-form">
+    <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit%>
+    <% end %>
+  </div>
+</div>

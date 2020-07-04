@@ -11,3 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+    padding-top: 65px;
+}
+
+.container {
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 20px;
+}

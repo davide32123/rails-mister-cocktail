@@ -10,9 +10,20 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-light bg-light fixed-top">
+      <%= link_to 'Mr Cocktail', cocktails_path, class: "navbar-brand" %>
+      <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-outline-primary my-2 my-sm-0 ml-2" %>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

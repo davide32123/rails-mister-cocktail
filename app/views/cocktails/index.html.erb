@@ -1,8 +1,11 @@
 <h1>All the cocktails</h1>
-<ul>
-<% @cocktails.each do |cocktail| %>
-  <li> <%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
-<% end %>
-</ul>
-<hr>
-<%= link_to 'Create new cocktail', new_cocktail_path %>
+<div class="card-container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="vertical-card col-3" data-aos="fade-up">
+        <img src="https://source.unsplash.com/random/800x600" alt="" class="vertical-card-img">
+        <%= link_to cocktail.name, cocktail_path(cocktail), class: "flex-grow-1 text-justify" %>
+      </div>
+    <% end %>
+  </div>
+</div>
