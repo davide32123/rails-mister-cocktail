@@ -1,10 +1,10 @@
-<h1>All the cocktails</h1>
+<h1>Choose your poison</h1>
 <div class="card-container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="vertical-card" data-aos="fade-up">
-       <%= link_to (cl_image_tag cocktail.photo.key, height: 400, width: 250, crop: :fill, class: "vertical-card-img"), cocktail_path(cocktail) %>
-        <%= link_to cocktail.name, cocktail_path(cocktail), class: "flex-grow-1 text-justify" %>
+        <%= link_to (cl_image_tag cocktail.photo.key, height: 400, width: 250, crop: :fill, class: "vertical-card-img"), cocktail_path(cocktail) %>
+        <%= link_to cocktail.name, cocktail_path(cocktail), class: "image-text" %>
       </div>
     <% end %>
   </div>
