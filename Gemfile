@@ -54,3 +54,4 @@ gem 'simple_form'
 
 # Images handling
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.12.0'
