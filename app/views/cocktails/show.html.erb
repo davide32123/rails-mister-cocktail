@@ -17,9 +17,8 @@
     </div>
   </div>
 </div>
-<div>
-
-<a name="reviews"><h3 class="m-3">Anonymous reviews</h3></a><hr>
+<div class="display-full-height">
+  <a name="reviews"><h3 class="m-3">Anonymous reviews</h3></a><hr>
   <% @cocktail.reviews.each do |review| %>
     <%= review.rating  %> - <%= review.content  %>
     <%= link_to 'delete', review_path(review), method: :delete, data: { confirm: "Are you sure?" } %></p>
