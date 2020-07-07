@@ -1,11 +1,12 @@
 .vertical-card {
   height:500px;
+  width: 250px;
   box-shadow: 2px 2px 0px 0px rgba(0, 0, 255, .2);
   margin: 8px;
   border-radius: 5%;
   .vertical-card-img {
     height: 400px;
-    width: 105%;
+    width: 250px;
     background-image: cover;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
