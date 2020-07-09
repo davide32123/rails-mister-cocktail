@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+.landing {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  background-image: url("cocktails.jpeg");
+  background-size: cover;
+  color: white;
+  padding: 20px;
+}
+
+.big-text {
+  font-size: 60px;
+}
